@@ -1,0 +1,77 @@
+.wrap {
+  width: 50%;
+  margin: 30px auto 0;
+  min-width: 400px;
+  max-width: 400px;
+  border-radius: 6px;
+  box-shadow: 0 5px 18px -7px rgba(0,0,0,1);
+}
+
+/* header */
+.wrap > header {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, pink, skyblue);
+  border-radius: 6px 6px 0 0;
+}
+
+.wrap > header > h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* section */
+.wrap > section {
+  width: 100%;
+}
+
+.wrap > section > .list {
+  height: 400px;
+  background-color: #fafafa;
+}
+
+.wrap > section > .list > ul {
+  padding: 20px;
+}
+
+.wrap > section > .list > ul > li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.wrap > section > .list > ul > li + li {
+  margin-bottom: 0;
+}
+
+.wrap > section > .list > ul > li > i {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+}
+
+.wrap > section > input {
+  height: 30px;
+  padding-left: 15px;
+  border: 0;
+}
+
+.wrap > section > input:focus {
+  outline: none;
+}
+/* nav */
+.wrap > nav {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, pink, skyblue);
+  border-radius: 0 0 6px 6px;
+}
+
+.wrap > nav > i {
+  font-size: 25px;
+  cursor: pointer;
+}
