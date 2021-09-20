@@ -30,23 +30,25 @@
 
 .wrap > section > .list {
   height: 400px;
-  background-color: #fafafa;
-}
-
-.wrap > section > .list > ul {
   padding: 20px;
+  background-color: #fafafa;
+  overflow-y: auto;
+  -ms-overflow-style: none;
 }
 
-.wrap > section > .list > ul > li {
+.wrap > section > .list::-webkit-scrollbar {
+  display: none;
+}
+
+.wrap > section > .list > .list_row {
   margin-bottom: 10px;
   position: relative;
 }
 
-.wrap > section > .list > ul > li + li {
-  margin-bottom: 0;
-}
-
-.wrap > section > .list > ul > li > i {
+.wrap > section > .list > .list_row > button {
+  outline: none;
+  border: 0;
+  background-color: transparent;
   position: absolute;
   cursor: pointer;
   right: 0;
