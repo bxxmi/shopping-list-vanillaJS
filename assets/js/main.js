@@ -2,7 +2,15 @@ const itemsWrap = document.querySelector('.list');
 const addBtn = document.querySelector('nav i');
 const text = document.querySelector('input');
 
-function add() {
+addBtn.addEventListener('click', add);
+
+text.addEventListener('keypress', (e) => {
+  if(e.key === 'Enter') {
+    add();
+  }
+});
+
+function add(i) {
   const li = document.createElement('li');
   li.setAttribute('class', 'list_row');
 
@@ -18,16 +26,10 @@ function add() {
   li.appendChild(listName);
   itemsWrap.appendChild(li);
 
-  delBtn.addEventListener('click', () => {
-    itemsWrap.removeChild(li);
-  });
+  delBtn.addEventListener('click', del(i));
 }
 
-addBtn.addEventListener('click', add);
-
-text.addEventListener('keypress', (e) => {
-  if(e.key === 'Enter') {
-    add();
-  }
-});
-
+function del(i) {
+  let li = document.querySelector('.list_row');
+  itemsWrap.removeChild(li);
+}
